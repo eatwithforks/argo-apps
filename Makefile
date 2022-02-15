@@ -11,6 +11,6 @@ bootstrap:
 	kubectl apply -f cluster-charts/root-app-$(env).yml
 
 teardown:
-	kubectl delete -f cluster-charts/projects/project-$(env).yml
-	kubectl delete -f cluster-charts/root-app-$(env).yml
-	kubectl delete -f cluster-charts/apps-children/$(env)/
+	kubectl delete -f cluster-charts/projects/project-$(env).yml --ignore-not-found
+	kubectl delete -f cluster-charts/root-app-$(env).yml --ignore-not-found
+	kubectl delete -f cluster-charts/apps-children/$(env)/ --ignore-not-found

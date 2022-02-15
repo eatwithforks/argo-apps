@@ -5,11 +5,13 @@ kind: Application
 metadata:
   name: autoscaler
   namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: kube-system
-  project: dev
+  project: default
   source:
     helm:
       values: |

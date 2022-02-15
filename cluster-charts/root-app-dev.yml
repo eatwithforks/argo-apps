@@ -9,7 +9,7 @@ spec:
   source:
     path: cluster-charts/apps-children/dev
     repoURL: https://github.com/eatwithforks/argo-apps.git
-    targetRevision: HEAD
+    targetRevision: jyel/testenv
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
