@@ -3,7 +3,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cluster-autoscaler
+  name: autoscaler
   namespace: argocd
 spec:
   destination:
@@ -21,6 +21,8 @@ spec:
           serviceAccount:
             create: false
             name: cluster-autoscaler
+        image:
+          tag: v1.21.2
         extraArgs:
           v: 4
           logtostderr: true
