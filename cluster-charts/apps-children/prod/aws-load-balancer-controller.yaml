@@ -5,8 +5,6 @@ kind: Application
 metadata:
   name: aws-load-balancer-controller
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: https://kubernetes.default.svc

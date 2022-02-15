@@ -13,3 +13,4 @@ bootstrap:
 teardown:
 	kubectl delete -f cluster-charts/projects/project-$(env).yml
 	kubectl delete -f cluster-charts/root-app-$(env).yml
+	kubectl delete -f cluster-charts/apps-children/$(env)/
